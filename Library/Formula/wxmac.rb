@@ -37,6 +37,7 @@ class Wxmac < Formula
       "BUILD_STC=1"
     ]
     cd "wxPython" do
+      ENV.append_to_cflags "-stdlib=libc++"
       ENV.append_to_cflags "-arch #{MacOS.preferred_arch}"
 
       python do
